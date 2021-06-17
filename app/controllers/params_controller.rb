@@ -17,4 +17,14 @@ class ParamsController < ApplicationController
     end
     render json: { message: message }
   end
+
+  def user_name
+    username = params[:user_name]
+    password = params[:password]
+    if username == "hugh" && password == "swordfish"
+      render json: { message: "Valid credentials." }
+    else
+      render json: { message: "Invalid credentials" }
+    end
+  end
 end
