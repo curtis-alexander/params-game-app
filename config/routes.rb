@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get "/params_game", controller: "params", action: "show_name"
   get "/number_guess", controller: "params", action: "high_low"
 
+  post "/number_guess_segment/user_input", controller: "params", action: "segment_test"
   post "/user_input", controller: "params", action: "user_name"
 end

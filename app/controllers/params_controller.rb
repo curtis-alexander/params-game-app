@@ -18,6 +18,12 @@ class ParamsController < ApplicationController
     render json: { message: message }
   end
 
+  def segment_test
+    username = params[:username]
+    password = params[:password]
+    render json: { message: "your user name is #{username} and password is #{password}" }
+  end
+
   def user_name
     username = params[:user_name]
     password = params[:password]
