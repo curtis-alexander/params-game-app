@@ -6,6 +6,15 @@ class ParamsController < ApplicationController
   end
 
   def high_low
-    render json: { message: "hello" }
+    answer = 36
+    guess = 36
+    if guess < answer
+      message = "too low"
+    elsif guess > answer
+      message = "too high"
+    else
+      message = "you got it!"
+    end
+    render json: { message: message }
   end
 end
